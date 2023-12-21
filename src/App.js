@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import "./App.css";
+import CLOUDS from "vanta/src/vanta.clouds";
 
 function App() {
+  useEffect(() => {
+      CLOUDS({
+        el:'#vanta',
+        speed:2
+      });
+  },[]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="bg" id="vanta">
+        <div className="hero">
+          <h1>Cool Clouds</h1>
+        </div>
+      </div>
     </div>
   );
 }
